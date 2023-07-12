@@ -12,11 +12,12 @@ from django.urls import reverse
 class TemplateView(TemplateView):
     template_name = "base.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['insert'] = 'School admin'
-        context['insert1'] = 'Teacher-Student meeting'
-        return context
+class AboutView(TemplateView):
+    template_name = "about.html"
+
+class ContactView(TemplateView):
+    template_name = "contact.html"
+    
 # def HomeView(request):
 #     context = {'insert' : 'School admin', 'insert1' : 'Student-Teacher meeting'}
 #     return render(request, 'home.html/', context)

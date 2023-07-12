@@ -12,8 +12,8 @@
 </head>
 <body>
     
-    <h1><strong><a href="{% url 'home' %}"><img src=" static/logo.jpg  " alt="Photo"></a></strong></h1>
-    <h1><strong><a href='https://g20.mygov.in/'><img src= "static/Capture.jpg" alt="Photo"></a><strong></h1>
+    <h1><strong><a href="{% url 'home' %}"><img src="/static/logo.jpg" alt="Photo"></a></strong></h1>
+    <h1><strong><a href='https://g20.mygov.in/'><img src= "/static/Capture.JPG" alt="Photo"></a><strong></h1>
     
 </body>
 
@@ -22,8 +22,8 @@
 {% block content %}
 
 
-<a href="about.html">About us</a>
-<a href="contact.html">Contact us</a>
+<a href="{% url 'about' %}">About us</a>
+<a href="{% url 'contact' %}">Contact us</a>
 <p><strong>Visit schools affliated with us, see below!</strong></p>
 <button><a href="{% url "school_list" %}">School List</a></button>
 

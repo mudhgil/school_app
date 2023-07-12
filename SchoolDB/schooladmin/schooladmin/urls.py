@@ -8,6 +8,8 @@ urlpatterns = [
     # path ("", views.HomeView, name = 'home')
     path("admin/", admin.site.urls),
     path ("", views.TemplateView.as_view(), name = 'home'),
+    path ("about/", views.AboutView.as_view(), name = 'about'),
+    path ("contact/", views.ContactView.as_view(), name = 'contact'),
     path("list/", views.SchoolListView.as_view(), name = 'school_list'),
     path("create/", views.CreateSchoolView.as_view(), name = 'create_school'),
     path("create_teacher/", views.CreateTeacherView.as_view(), name = 'create_teacher'),
