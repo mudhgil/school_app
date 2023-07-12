@@ -4,7 +4,7 @@
 
 {% block content %}
     
-    <ul>
+    <ul class = "school_list">
         {% for item in school_list %}
         <li>
             <a href="{% url 'detail' item.pk %}">{{ item.school_name }}</a> - {{ item.state }}
@@ -16,9 +16,10 @@
         </li>
         {% endfor %}
     </ul>
-
+<div class = "create_buttons">
     <button><a href="{% url 'create_school' %}">Click to Add School</a></button>
     <button><a href="{% url 'create_teacher' %}">Click to Add Teacher</a></button>
     <button><a href="{% url 'create_student' %}">Click to Add Student</a></button>
+</div>
 {% endblock %}
 

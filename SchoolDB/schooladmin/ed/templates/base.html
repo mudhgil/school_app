@@ -23,7 +23,7 @@
             <a> Welcome: {{user.username}}</a>
           
             {% else %}
-            <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span>Login</a> 
+            <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span>Employee Login</a> 
 
             {% endif %}
     </nav>
@@ -31,7 +31,12 @@
     
     
     {% block content %}
-    <button><a href="{% url 'school_list' %}">School List</a></button>
+    <div class = "homepage">
+        
+        <button><a href="{% url 'school_list' %}">School List</a></button>
+        <p>Take a tour of schools affliated with CBSE</p>
+    </div>
     {% endblock %}
+    
 </body>
 </html>
