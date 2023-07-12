@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Edit School: {{ school_name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.school_name.id_for_label }}">School Name:</label>
+        {{ form.school_name }}
+        <br>
+        <label for="{{ form.state.id_for_label }}">State:</label>
+        {{ form.state }}
+        <br>
+        <button type="submit">Update School</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ school.school_name }}</h1>
+<p>State: {{ school.state }}</p>
+
+<h2>Teachers:</h2>
+<ul>
+  {% for teacher in school.teacher.all %}
+    <li>{{ teacher.teacher_name }}, Age: {{ teacher.age }}, Subject: {{ teacher.subject }}</li>
+  {% empty %}
+    <li>No teachers found.</li>
+  {% endfor %}
+</ul>
+
+<h2>Students:</h2>
+<ul>
+  {% for student in school.student.all %}
+    <li>{{ student.student_name }}, Age: {{ student.age }}</li>
+  {% empty %}
+    <li>No students found.</li>
+  {% endfor %}
+</ul>
+{% endblock  %}
