@@ -1,8 +1,46 @@
 body {
     background-color: rgb(241, 191, 115);
-    color: rgb(8, 1, 1); 
+    color: rgb(8, 1, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px; /* Increase the margin-bottom value to increase the distance */
+}
+
+.logo {
+    width: 600%;
+    max-width: 600px; /* Adjust the max-width value as needed */
+    align-items: flex-start; /* Use flex-start to align the logo to the left */
+}
+
+.capture {
+    width: 300%;
+    max-width: 300px; /* Adjust the max-width value as needed */
+    margin-left: auto;
+}
+
+
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+nav a {
+    margin: 0 100px;
+}
+
+button {
+    margin-bottom: 100px;
+    justify-content: center;
 }

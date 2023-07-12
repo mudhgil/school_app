@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +6,23 @@
     <title>CBSE</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    
 </head>
 <body>
+    <div class="top-section">
+        <h1><strong><a href="{% url 'home' %}"><img src="/static/logo.jpg" alt="Photo" class="logo"></a></strong></h1>
+        <h1><strong><a href='https://g20.mygov.in/'><img src="/static/Capture.JPG" alt="Photo" class="capture"></a><strong></h1>
+    </div>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </nav>
+
     
-    <h1><strong><a href="{% url 'home' %}"><img src="/static/logo.jpg" alt="Photo"></a></strong></h1>
-    <h1><strong><a href='https://g20.mygov.in/'><img src= "/static/Capture.JPG" alt="Photo"></a><strong></h1>
     
+    {% block content %}
+    <button><a href="{% url 'school_list' %}">School List</a></button>
+    {% endblock %}
 </body>
-
-
-
-{% block content %}
-
-
-<a href="{% url 'about' %}">About us</a>
-<a href="{% url 'contact' %}">Contact us</a>
-<p><strong>Visit schools affliated with us, see below!</strong></p>
-<button><a href="{% url "school_list" %}">School List</a></button>
-
-
-    {% endblock  %}
-
-
 </html>
