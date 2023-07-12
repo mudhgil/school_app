@@ -17,6 +17,15 @@
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'about' %}">About Us</a>
         <a href="{% url 'contact' %}">Contact Us</a>
+        {% if user.is_authenticated %}
+          
+            <a href="{% url 'logout'%}"> Log out</a>
+            <a> Welcome: {{user.username}}</a>
+          
+            {% else %}
+            <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span>Login</a> 
+
+            {% endif %}
     </nav>
 
     
