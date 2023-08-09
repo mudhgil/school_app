@@ -4,8 +4,7 @@
 
 ## Description
 
-This web app is developed for education board management which helps the administration to 
-manage schools, teachers and students under their education board.
+This web application is meticulously designed for efficient education board management. It empowers administrators to seamlessly oversee schools, teachers, and students affiliated with their education board, streamlining operations and enhancing educational excellence.
 
 
 ## Installation
